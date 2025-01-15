@@ -1,4 +1,4 @@
-FROM golang:1.22-bullseye as go
+FROM golang:1.22-bullseye AS go
 
 COPY tmp/devtools /devtools
 

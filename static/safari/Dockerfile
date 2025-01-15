@@ -1,4 +1,4 @@
-FROM ubuntu:22.04 as build
+FROM ubuntu:22.04 AS build
 
 ARG WEBKIT_TAG="main"
 
@@ -14,7 +14,7 @@ RUN \
     ninja install && \
     rm -Rf /var/lib/apt/lists/*
 
-FROM golang:1.22-bullseye as go
+FROM golang:1.22-bullseye AS go
 
 COPY cmd/prism /prism
 
