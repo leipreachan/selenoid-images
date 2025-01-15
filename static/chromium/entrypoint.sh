@@ -2,6 +2,8 @@
 SCREEN_RESOLUTION=${SCREEN_RESOLUTION:-"1920x1080x24"}
 DISPLAY_NUM=99
 export DISPLAY=":$DISPLAY_NUM"
+echo Moving mouse to position 0 0
+DISPLAY="$DISPLAY" /usr/bin/xdotool mousemove 0 0
 
 VERBOSE=${VERBOSE:-""}
 DRIVER_ARGS=${DRIVER_ARGS:-""}

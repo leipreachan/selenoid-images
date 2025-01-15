@@ -65,6 +65,8 @@ if [ "$ENABLE_VNC" == "true" ]; then
     X11VNC_PID=$!
 fi
 
+echo "Moving mouse to position 0 0"
+DISPLAY="$DISPLAY" /usr/bin/xdotool mousemove 0 0
 DISPLAY="$DISPLAY" /opt/webkit/bin/WebKitWebDriver --port=5555 --host=0.0.0.0 ${DRIVER_ARGS} &
 DRIVER_PID=$!
 
