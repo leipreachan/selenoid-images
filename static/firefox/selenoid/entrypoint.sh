@@ -68,6 +68,9 @@ fi
 DISPLAY="$DISPLAY" /usr/bin/selenoid -conf /tmp/browsers.json -disable-docker -timeout 1h -max-timeout 24h -enable-file-upload -capture-driver-logs &
 SELENOID_PID=$!
 
+echo "Moving mouse to position 0 0"
+DISPLAY="$DISPLAY" /usr/bin/xdotool mousemove --sync 0 0
+
 if env | grep -q ROOT_CA_; then
   while true; do
     if certDB=$(ls -d /tmp/rust_mozprofile*/cert9.db 2>/dev/null); then

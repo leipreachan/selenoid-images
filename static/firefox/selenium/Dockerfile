@@ -4,6 +4,7 @@ FROM selenoid/dev_firefox:$VERSION
 RUN \
     apt-get update && \
     apt-get install -y openjdk-8-jre-headless && \
+    apt-get install -y xdotool && \
     apt-get clean && \
     rm -Rf /tmp/*
 

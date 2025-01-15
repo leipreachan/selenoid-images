@@ -15,6 +15,7 @@ RUN  \
         ) || true && \
         apt-get update && \
         apt-get -y --no-install-recommends install iproute2 libavcodec58 $PACKAGE=$VERSION && \
+        apt-get -y --no-install-recommends install xdotool && \
         ( [ "$PACKAGE" != "firefox" ] && ln /usr/bin/$PACKAGE /usr/bin/firefox ) || true && \
         firefox --version && \
         rm -Rf /tmp/* && rm -Rf /var/lib/apt/lists/*

@@ -95,9 +95,10 @@ if [ "$ENABLE_VNC" == "true" ]; then
     X11VNC_PID=$!
 fi
 
-echo "Moving mouse to position 0 0"
-DISPLAY="$DISPLAY" /usr/bin/xdotool mousemove 0 0
 DISPLAY="$DISPLAY" /usr/bin/chromedriver --port=4444 --allowed-ips='' --allowed-origins='*' ${DRIVER_ARGS} &
 DRIVER_PID=$!
+
+echo "Moving mouse to position 0 0"
+DISPLAY="$DISPLAY" /usr/bin/xdotool mousemove --sync 0 0
 
 wait

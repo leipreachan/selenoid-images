@@ -50,4 +50,7 @@ fi
 DISPLAY="$DISPLAY" /usr/bin/java -Xmx256m -Djava.security.egd=file:/dev/./urandom -jar /usr/share/selenium/selenium-server-standalone.jar -port 4444 -browserTimeout 120 &
 SELENIUM_PID=$!
 
+echo "Moving mouse to position 0 0"
+DISPLAY="$DISPLAY" /usr/bin/xdotool mousemove --sync 0 0
+
 wait
