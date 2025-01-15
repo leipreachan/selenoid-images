@@ -52,6 +52,7 @@ RUN \
          xdg-utils \
          libcurl4 \
          iproute2 \
+         xdotool \
          curl && \
          curl -O http://host.docker.internal:8080/google-chrome.deb && \
          apt-get -y purge curl && \

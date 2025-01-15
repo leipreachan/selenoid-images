@@ -62,6 +62,7 @@ RUN \
     wmctrl \
     libnss-wrapper \
     xsel && \
+    xdotool && \
     if [ `uname -m` = "amd64" ]; then apt install -y flashplugin-installer; fi && \
     mkdir -p /var/lib/locales/supported.d/ && grep UTF-8 /usr/share/i18n/SUPPORTED > /var/lib/locales/supported.d/all && \
     locale-gen && update-locale && \

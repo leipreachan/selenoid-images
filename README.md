@@ -22,3 +22,9 @@ Moved to: http://aerokube.com/images/latest/#_building_images
 
 ## Image information
 Moved to: http://aerokube.com/images/latest/#_browser_image_information
+
+
+## Important
+If you changed anything in the repo, RE-RUN `go generate github.com/aerokube/images && go build`!!!!!
+
+If build from a local *.deb file fails, use `python3 -m http.server 8080` to expose the browser and run `docker build ..` command

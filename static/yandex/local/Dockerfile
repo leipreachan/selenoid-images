@@ -54,6 +54,7 @@ RUN \
          libgbm1 \
          wget \
          libcurl4 \
+         xdotool \
          curl && \
          curl -O http://host.docker.internal:8080/yandex-browser.deb && \
          apt-get -y purge curl && \

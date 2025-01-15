@@ -84,16 +84,21 @@ $ ./images firefox -b 79.0+build1-0ubuntu0.18.04.1 -t selenoid/firefox:79.0 --pu
 +
 [source,bash]
 ----
-$ ./images chrome -b 78.0.3904.97-1 -d 78.0.3904.70 -t selenoid/chrome:78.0
+$ ./images chrome -b 78.0.3904.97-1 -d 78.0.3904.70 -t leipreachan/selenoid:chrome_stable_78.0
 ----
 +
-Here `78.0.3904.97-1` is `google-chrome-stable` package version for Ubuntu 18.04, `78.0.3904.70` is https://chromedriver.storage.googleapis.com/index.html[Chromedriver] version, `selenoid/chrome:78.0` is Docker tag to be applied.
+Here `78.0.3904.97-1` is `google-chrome-stable` package version for Ubuntu 18.04, `78.0.3904.70` is https://chromedriver.storage.googleapis.com/index.html[Chromedriver] version, `leipreachan/selenoid:chrome_stable_78.0` is Docker tag to be applied.
 +
 If you wish to automatically use the latest https://chromedriver.chromium.org/downloads/version-selection[compatible] Chromedriver version - just omit respective flag or use **latest** as value:
 +
 [source,bash]
 ----
-$ ./images chrome -b 78.0.3904.97-1 -d latest -t selenoid/chrome:78.0
+$ ./images chrome -b 78.0.3904.97-1 -d latest -t leipreachan/selenoid:chrome_stable_78.0
+----
+
+[source,bash]
+----
+$ ./images chrome -b "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_131.0.6778.264-1_amd64.deb" -d latest -t leipreachan/selenoid:chrome_stable_131
 ----
 
 * To build a Microsoft Edge image use the following command:
