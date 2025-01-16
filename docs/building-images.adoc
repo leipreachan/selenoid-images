@@ -19,18 +19,19 @@ $ go generate github.com/aerokube/images
 $ go build
 ----
 
+Export this variable if you're using Apple M1+:
+
+[source,bash]
+----
+$ export DOCKER_DEFAULT_PLATFORM=linux/amd64
+----
+
 To show help:
 
 [source,bash]
 ----
 $ ./images --help
 $ ./images firefox --help
-----
-
-Export this variable if you're using Apple M1+:
-[source,bash]
-----
-$ export DOCKER_DEFAULT_PLATFORM=linux/amd64
 ----
 
 * Before building images you can optionally clone tests repository:
