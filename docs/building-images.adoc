@@ -27,6 +27,12 @@ $ ./images --help
 $ ./images firefox --help
 ----
 
+Export this variable if you're using Apple M1+:
+[source,bash]
+----
+$ export DOCKER_DEFAULT_PLATFORM=linux/amd64
+----
+
 * Before building images you can optionally clone tests repository:
 +
 [source,bash]
